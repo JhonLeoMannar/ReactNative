@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { View, Text, Button} from "react-native";
 import { ProgressBar } from 'react-native-paper';
 import { saveTimers } from "../utils/storage";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 export default function TimerItem({ timer, timers, setTimers }) {
   const [remaining, setRemaining] = useState(timer.remaining);
